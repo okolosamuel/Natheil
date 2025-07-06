@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../img/pic-2.png);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.popup{
+    margin-top: 30px;
+    margin-bottom: -0px;
+    margin-left: 1400px;
+}
+
+.popup .approved{
+    display: none;
+    height: 120px;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    background: rgba(3, 134, 3, 0.655);
+    margin-right: 40px;
+}
+
+.popup .approved h3{
+    font-size: 25px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.popup .approved .para6{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: -80px;
+
+}
+
+
+.popup .Declined{
+    display: none;
+    height: 120px;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    background: rgba(255, 0, 0, 0.816);
+    margin-right: 40px;
+}
+
+
+.popup .Declined h3{
+    font-size: 25px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.popup .Declined .para6{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: -80px;
+
+}
+
+
+.popup .notDefined{
+    display: none;
+    height: 120px;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    background: rgba(255, 127, 80, 0.81);
+    margin-right: 40px;
+}
+
+
+.popup .notDefined h3{
+    font-size: 25px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.popup .notDefined .para6{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: -80px;
+
+}
+
+
+
+.log-cont{
+    background: #fff;
+    width: 450px;
+    height: 650px;
+    margin-top: 100px;
+    margin-left: 900px;
+    border-radius: 10px;
+}
+
+.log-cont h1{
+    padding-top: 30px;
+    padding-left: 40px;
+    font-size: 39px;
+}
+
+
+.log-cont h1 span{
+    color: rgb(0, 140, 254);
+}
+
+.log-cont h4{
+    padding-top: 10px;
+    padding-left: 170px;
+    font-size: 39px;
+}
+
+form{
+    margin-top: 30px;
+}
+
+form .inpt-2{
+    width: 400px;
+    height: 60px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+input[type="text"]{
+     font-size: 17px;
+    padding-left: 20px;
+    color: #000;
+    outline: none;
+    border: 1px solid rgb(0, 140, 254);
+    cursor: pointer;
+}
+
+input[type="password"]{
+     font-size: 17px;
+    padding-left: 20px;
+    color: #000;
+    outline: none;
+    border: 1px solid rgb(0, 140, 254);
+    cursor: pointer;
+}
+
+.check{
+    margin-left: 23px;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+
+input[type="checkbox"]{
+  height: 20px;
+  width: 30px;
+}
+
+.check span{
+ font-size: 20px;
+}
+
+
+
+.reg{
+    margin-top: 25px;
+    margin-left: 295px;
+    font-size: 18px;
+}
+
+.reg a{
+    text-decoration: none;
+        color: rgb(25, 92, 159);
+}
+
+
+.btn-3{
+     width: 400px;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: bold;
+    background: rgb(0, 140, 254);
+    border: 2px solid rgb(0, 140, 254);
+}
+
+.btn-3 a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+.btn-3:hover{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: rgba(0, 140, 254, 0.651);
+}
+
+.para{
+   margin-left: 170px;
+   color: rgb(0, 140, 254);
+   font-size: 24px;
+}
+
+.footer{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.bz-2{
+     display: flex;
+     margin-top: 10px;
+     margin-left: 10px;
+}
+
+.footer .active{
+       width: 100px;
+    height: 40px;
+    margin-left: 25px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 17px;
+    background: rgb(0, 140, 254);
+    border: 2px solid rgb(0, 140, 254);
+}
+
+
+.footer button{
+    cursor: pointer;
+       width: 100px;
+    height: 40px;
+    margin-left: 25px;
+    border-radius: 6px;
+    color: #000;
+    font-size: 17px;
+    background: transparent;
+    border: 2px solid rgb(0, 140, 254);
+}
+
+button:hover{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: rgba(0, 140, 254, 0.651);
+}
+
+button a{
+    text-decoration: none;
+    color: #000;
+}

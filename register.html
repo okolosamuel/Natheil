@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Register</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    background: url(../img/pic-2.png);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+      }
+      form {
+        background: #fff;
+        width: 500px;
+        height: 400px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      input {
+        width: 100%;
+        height: 50px;
+        margin: 10px 0;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 20px;
+        border-radius: 7px;
+        border: 1px solid rgb(0, 140, 254);
+      }
+
+      button{
+        margin-top: 20px;
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+        color: #fff;
+        border-radius: 6px;
+        border: 1px solid rgb(0, 140, 254);
+        background: rgb(0, 140, 254);
+        cursor: pointer;
+      }
+
+      button:hover{
+         background: rgba(0, 140, 254, 0.667);
+      }
+
+      a{
+        margin-left: 290px;
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(0, 140, 254);
+      }
+    </style>
+  </head>
+  <body>
+    <form id="registerForm">
+      <h2>Register</h2>
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm Password"
+        required
+      />
+      <button type="submit">Register</button>
+      &nbsp;<a href="login.html">Go to Login</a>
+    </form>
+
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+          }
+
+          const user = {
+            name: name,
+            username: username,
+            password: password,
+          };
+
+          localStorage.setItem(username, JSON.stringify(user));
+          alert("Registration successful! Please login.");
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

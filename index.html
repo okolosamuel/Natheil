@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logIn.css">
+    <style>
+      /* .popup { 
+        display: block; 
+        position: fixed; 
+        top: 0;
+         left: 0;
+          width: 100vw; 
+          height: 100vh; 
+          background: rgba(0,0,0,0.4); 
+          justify-content: center;
+           align-items: center;
+            z-index: 1000; } */
+      .approved.active {
+         display: flex; 
+        }
+
+        .Declined.active {
+         display: flex; 
+        }
+
+         .notDefined.active {
+         display: flex; 
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="popup">
+        <div class="approved"> 
+          <h3>Natheil BDSM</h3>
+          <p class="para6">You have successfully LogIn</p>
+        </div>
+
+         <div class="Declined"> 
+          <h3>Natheil BDSK</h3>
+          <p class="para6">Incorrect password</p>
+        </div>
+
+        <div class="notDefined">
+          <h3>Netheile BDSM</h3>
+          <p class="para6">User not found</p>
+        </div>
+      </div>
+        <div class="log-cont">
+            <h1>Welcome to <span>Natheil BDSM</span></h1>
+            <h4>Admin</h4>
+            <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required  class="inpt-2"/>
+      <input type="password" id="password" placeholder="Password" required class="inpt-2"/>
+              <div class="check">
+                <input type="checkbox">
+                <span>Remember Me</span>
+              </div>
+
+                &nbsp;<a href="register.html" class="reg">Go to Register</a>
+
+              <button type="submit" class="btn-3">Submit</button>
+            </form>
+
+    </div>
+
+
+     <script>
+      document.getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          const user = localStorage.getItem(username);
+
+          if (user) {
+            const addedUser = JSON.parse(user);
+            if (addedUser.password === password) {
+              localStorage.setItem("user", JSON.stringify(addedUser));
+              // Show approved popup
+              document.querySelector('.approved').classList.add('active');
+              document.querySelector('.log-cont').style.display = 'block';
+              setTimeout(function() {
+                window.location.href = "home.html";
+              }, 9000);
+            } else {
+              // alert("Incorrect password");
+                // Show Decliened popup
+              document.querySelector('.Declined').classList.add('active');
+              document.querySelector('.log-cont').style.display = 'block';
+              setTimeout(function() {
+                window.location.href = "index.html";
+              }, 9000);
+            }
+            
+          } else {
+            // alert("User not found");
+
+                // Show notDefined popup
+              document.querySelector('.notDefined').classList.add('active');
+              document.querySelector('.log-cont').style.display = 'block';
+              setTimeout(function() {
+                window.location.href = "index.html";
+              }, 9000);
+          }
+        });
+    </script>
+</body>
+</html>
